@@ -4,7 +4,6 @@ import copy
 from collections.abc import Sequence
 from functools import partial
 import warnings
-import unittest
 import inspect
 import itertools
 import torch
