@@ -774,9 +774,8 @@ class VariableBuilder:
             self.tx.output.tracked_fakes.append(
                 TrackedFake(new_symint, new_source, None)
             )
-            return SymNodeVariable(
-                sym_node_proxy,
-                new_symint == 1,
+            return SymNodeVariable.create(
+                self.tx, sym_node_proxy, new_symint == 1, source=new_source
             )
         else:
             result = UserDefinedObjectVariable(

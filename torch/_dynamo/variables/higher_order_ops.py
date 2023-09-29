@@ -361,7 +361,11 @@ class CondHigherOrderVariable(TorchHigherOrderOperatorVariable):
                 f"Usage: cond(pred, true_fn, false_fn, operands)",
             )
         # predicate
-        if type(args[0]) not in (ConstantVariable, TensorVariable, SymNodeVariable):
+        if type(args[0]) not in (
+            ConstantVariable,
+            TensorVariable,
+            SymNodeVariable,
+        ):
             unimplemented(
                 f"Expected pred to be bool or a boolean tensor with single "
                 f"item but got {str(type(args[0]))} "
