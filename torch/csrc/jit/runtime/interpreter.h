@@ -21,8 +21,7 @@ struct IValue;
 struct OperatorName;
 } // namespace c10
 
-namespace torch {
-namespace jit {
+namespace torch::jit {
 
 // The interpreter run Graphs with Tensor inputs and Tensor outputs
 // a separate component in the autograd handles unwrapping and wrapping
@@ -155,5 +154,5 @@ TORCH_API at::TensorTypePtr tensorTypeInCurrentExecutionContext(
 TORCH_API std::vector<StackEntry> currentCallstack();
 TORCH_API std::vector<std::string> currentModuleHierarchy();
 
-} // namespace jit
-} // namespace torch
+
+} // namespace torch::jit
